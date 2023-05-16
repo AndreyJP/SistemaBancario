@@ -4,8 +4,14 @@ public class Gerente extends Funcionario {
     private int senha;
     private String tipo;
 
-    public Gerente(String nome){
+    public Gerente(String nome, double salario){
         this.nome = nome;
+        this.salario = salario;
+    }
+
+    @Override
+    public double calcularBonificacao(){
+        return this.salario * 0.20;
     }
 
 }
